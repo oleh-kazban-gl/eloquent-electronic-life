@@ -9,7 +9,6 @@ herbivores and bloodthirsty predators.
 
 ## World and Symbols
 
-```javascript
     ############################
     #  @   #    #      o      ##
     #   **                     #
@@ -22,7 +21,6 @@ herbivores and bloodthirsty predators.
     # o  #         o       ### #
     #    #             *       #
     ############################
-```
 
 Because we don't use canvas or something like that, we use pseudographics - all
 objects are represented as predefined symbols.
