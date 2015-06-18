@@ -269,10 +269,10 @@ actionTypes.reproduce = function (critter, vector, action) {
   var baby = elementFromChar(this.legend, critter.originChar);
   var dest = this.checkDestination(action, vector);
 
-  if (dest == null ||
-    critter.energy <= 2 * baby.energy ||
-    this.grid.get(dest) != null)
-    return false;
+  //if (dest == null ||
+  //  critter.energy <= 2 * baby.energy ||
+  //  this.grid.get(dest) != null)
+  //  return false;
   critter.energy -= 2 * baby.energy;
   this.grid.set(dest, baby);
   return true;
@@ -439,7 +439,7 @@ Predator.prototype.act = function (context) {
   var plant = context.find('*');
 
   if (plant && this.energy < 20) {
-    console.log('@: Predator is so hungry that it eats the plants!')
+    console.log('@: Predator is so hungry that it eats the plants!');
     return {type: 'eat', direction: plant};
   }
 
@@ -454,7 +454,7 @@ Predator.prototype.act = function (context) {
   }
 
   if (otherEntity) {
-    if (this.energy > 200 && space) {
+    if (this.energy > 200 && space && Math.random() > 0.5) {
       console.log('@: It\'s time for love!!! New predator appears!');
       return {type: 'reproduce', direction: space};
     } else if (space) {
