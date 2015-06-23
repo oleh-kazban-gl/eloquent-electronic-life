@@ -1,3 +1,5 @@
+'use strict';
+
 var GridModule = function () {
 
   function Vector(x, y) {
@@ -38,13 +40,6 @@ var GridModule = function () {
           if (value != null)
             f.call(context, value, new Vector(x, y));
         }
-      }
-    },
-    alert: function(message) {
-      if (message !== null) {
-        alert(message)
-      } else {
-        alert('!!!');
       }
     },
     toString: function() {

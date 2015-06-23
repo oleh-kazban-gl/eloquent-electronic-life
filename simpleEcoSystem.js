@@ -1,3 +1,5 @@
+'use strict';
+
 function Wall() {
 }
 
@@ -55,3 +57,7 @@ BouncingCritter.prototype.act = function (view) {
   return {type: 'move', direction: this.direction};
 };
 
+function dirPlus(dir, n) {
+  var index = directionNames.indexOf(dir);
+  return directionNames[(index + n + 8) % 8];
+}
