@@ -26,34 +26,6 @@ function straightElement(array) {
   }
 }
 
-//var world = new WorldModule.World(plan, {
-//  '#': Wall,
-//  'o': BouncingCritter
-//});
-
-
-//var valley = new WorldModule.LifelikeWorld(
-//  [
-//    '############################',
-//    '#####                 ######',
-//    '##   ***                **##',
-//    '#   *##**         **  O  *##',
-//    '#    ***     O    ##**    *#',
-//    '#       O         ##***    #',
-//    '#                 ##**     #',
-//    '#   O       #*             #',
-//    '#*          #**       O    #',
-//    '#***        ##**    O    **#',
-//    '##****     ###***       *###',
-//    '############################'
-//  ],
-//  {
-//    '#': Wall,
-//    'O': PlantEater,
-//    '*': Plant
-//  }
-//);
-
 var smartValley = new WorldModule.LifelikeWorld(
   [
     "####################################################",

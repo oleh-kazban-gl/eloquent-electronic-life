@@ -1,3 +1,5 @@
+'use strict';
+
 function SmartPlantEater() {
   this.energy = 20;
 }

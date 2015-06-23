@@ -1,3 +1,5 @@
+'use strict';
+
 var WorldModule = function () {
 
   function World(map, legend) {

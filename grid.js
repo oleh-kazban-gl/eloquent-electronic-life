@@ -1,3 +1,5 @@
+'use strict';
+
 var GridModule = function () {
 
   function Vector(x, y) {
