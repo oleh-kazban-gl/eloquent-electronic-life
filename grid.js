@@ -40,13 +40,6 @@ var GridModule = function () {
         }
       }
     },
-    alert: function(message) {
-      if (message !== null) {
-        alert(message)
-      } else {
-        alert('!!!');
-      }
-    },
     toString: function() {
       return 'Grid space: ' + this.space + ' width: ' + this.width + ' height: ' + this.height;
     }

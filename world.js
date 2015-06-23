@@ -164,16 +164,7 @@ var WorldModule = function () {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  var directions = {
-    'n': new GridModule.Vector(0, 1),
-    'ne': new GridModule.Vector(1, -1),
-    'e': new GridModule.Vector(1, 0),
-    'se': new GridModule.Vector(1, 1),
-    's': new GridModule.Vector(0, -1),
-    'sw': new GridModule.Vector(-1, 1),
-    'w': new GridModule.Vector(-1, 0),
-    'nw': new GridModule.Vector(-1, -1)
-  };
+  var directions = GridModule.directions;
 
   return {
     World: World,

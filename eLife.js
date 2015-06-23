@@ -31,10 +31,6 @@ function straightElement(array) {
 //  'o': BouncingCritter
 //});
 
-function dirPlus(dir, n) {
-  var index = directionNames.indexOf(dir);
-  return directionNames[(index + n + 8) % 8];
-}
 
 //var valley = new WorldModule.LifelikeWorld(
 //  [
