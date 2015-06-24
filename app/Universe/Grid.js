@@ -1,6 +1,6 @@
 'use strict';
 
-var Grid = function () {
+var Grid = (function () {
 
   function Vector(x, y) {
     this.x = x;
@@ -67,4 +67,4 @@ var Grid = function () {
     directions: directions,
     directionNames: directionNames
   };
-}();
+})();

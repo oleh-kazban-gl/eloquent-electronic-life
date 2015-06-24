@@ -1,6 +1,6 @@
 'use strict';
 
-var World = function () {
+var World = (function () {
 
   function World(map, legend) {
     //var grid = new Grid(map[0].length, map.length);
@@ -173,4 +173,4 @@ var World = function () {
     randomElement: randomElement,
     directions: directions
   };
-}();
+})();

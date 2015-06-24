@@ -1,6 +1,6 @@
 'use strict';
 
-var Map = function () {
+var Map = (function () {
   var map = [
     '####################################################',
     '#                 ####         ****              ###',
@@ -36,4 +36,4 @@ var Map = function () {
     map: map,
     description: description
   };
-}();
+})();
