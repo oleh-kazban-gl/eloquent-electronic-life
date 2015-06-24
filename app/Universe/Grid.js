@@ -1,6 +1,6 @@
 'use strict';
 
-var GridModule = function () {
+var Grid = function () {
 
   function Vector(x, y) {
     this.x = x;
@@ -42,7 +42,7 @@ var GridModule = function () {
         }
       }
     },
-    toString: function() {
+    toString: function () {
       return 'Grid space: ' + this.space + ' width: ' + this.width + ' height: ' + this.height;
     }
   };
@@ -66,5 +66,5 @@ var GridModule = function () {
     Grid: Grid,
     directions: directions,
     directionNames: directionNames
-  }
+  };
 }();

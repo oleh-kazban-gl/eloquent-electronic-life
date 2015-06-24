@@ -1,16 +1,16 @@
 'use strict';
 
-var WorldModule = function () {
+var World = function () {
 
   function World(map, legend) {
     //var grid = new Grid(map[0].length, map.length);
-    var grid = new GridModule.Grid(map[0].length, map.length);
+    var grid = new Grid.Grid(map[0].length, map.length);
     this.grid = grid;
     this.legend = legend;
 
     map.forEach(function (line, y) {
       for (var x = 0; x < line.length; x++) {
-        grid.set(new GridModule.Vector(x, y),
+        grid.set(new Grid.Vector(x, y),
           elementFromChar(legend, line[x]));
       }
     });
@@ -21,7 +21,7 @@ var WorldModule = function () {
       var output = '';
       for (var y = 0; y < this.grid.height; y++) {
         for (var x = 0; x < this.grid.width; x++) {
-          var element = this.grid.get(new GridModule.Vector(x, y));
+          var element = this.grid.get(new Grid.Vector(x, y));
           output += charFromElement(element);
         }
         output += '\n';
@@ -80,9 +80,7 @@ var WorldModule = function () {
       var found = this.findAll(ch);
       if (found.length == 0) return null;
 
-      //return randomElement(found);
-
-      return straightElement(found); // let make movement more straight
+      return Critter.straightElement(found); // let make movement more straight
     }
   };
 
@@ -166,7 +164,7 @@ var WorldModule = function () {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  var directions = GridModule.directions;
+  var directions = Grid.directions;
 
   return {
     World: World,
@@ -174,5 +172,5 @@ var WorldModule = function () {
     LifelikeWorld: LifelikeWorld,
     randomElement: randomElement,
     directions: directions
-  }
+  };
 }();
