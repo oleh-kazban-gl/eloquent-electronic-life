@@ -1,0 +1,3 @@
+if (!eLife) {
+  var eLife = {};
+}

@@ -1,17 +1,47 @@
 <html>
-<head></head>
+<head>
+    <meta charset="UTF-8">
+    <title>Electronic life</title>
+    <style>
+        body, *{
+            font-family: monospace;
+            font-size: 16px;
+            margin-left: 15px;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
 <body>
 
-<script src="app/Entity/Barrier.js"></script>
-<script src="app/Entity/Plant.js"></script>
-<script src="app/Entity/Critter.js"></script>
+<!--Main-->
+<script type="text/javascript" src="js/eLife.js"></script>
 
-<script src="app/Universe/Grid.js"></script>
-<script src="app/Universe/World.js"></script>
-<script src="app/Universe/Map.js"></script>
+<!--Entities-->
+<script type="text/javascript" src="js/app/Entity/Plant.js"></script>
+<script type="text/javascript" src="js/app/Entity/Critter.js"></script>
+<script type="text/javascript" src="js/app/Entity/Barrier.js"></script>
+<script type="text/javascript" src="js/app/Entity/Actions.js"></script>
+
+<!--Universe-->
+<script type="text/javascript" src="js/app/Universe/Elements.js"></script>
+<script type="text/javascript" src="js/app/Universe/World.js"></script>
+<script type="text/javascript" src="js/app/Universe/Vector.js"></script>
+<script type="text/javascript" src="js/app/Universe/Grid.js"></script>
+<script type="text/javascript" src="js/app/Universe/View.js"></script>
+<script type="text/javascript" src="js/app/Universe/Directions.js"></script>
+<script type="text/javascript" src="js/app/Universe/Plan.js"></script>
+
+<script type="text/javascript" src="js/app/Universe/animateWorld.js"></script>
 
 <script>
-    World.start(Map.plan);
+    eLife.animateWorld(eLife.Plan);
 </script>
 
+<!--<script data-main="js/app/main" src="js/lib/require.js"></script>-->
+
 </body>
+</html>
