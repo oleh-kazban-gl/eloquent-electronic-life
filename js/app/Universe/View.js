@@ -1,14 +1,19 @@
 //View
 
-(function (module) {
+define([
+  'app/Universe/directions',
+  'app/helperElements/charFromElement',
+  'app/helperElements/randomElement'
+], function(directions, charFromElement, randomElement){
+  'use strict';
 
-  function View(world, vector) {
-    this.world = world;
-    this.vector = vector;
+  function View(World, Vector) {
+    this.world = World;
+    this.vector = Vector;
   }
 
   View.prototype.look = function (dir) {
-    var target = this.vector.plus(module.directions[dir]);
+    var target = this.vector.plus(directions[dir]);
     if (this.world.grid.isInside(target))
       return charFromElement(this.world.grid.get(target));
     else
@@ -17,7 +22,7 @@
 
   View.prototype.findAll = function (ch) {
     var found = [];
-    for (var dir in module.directions) {
+    for (var dir in directions) {
       if (this.look(dir) == ch)
         found.push(dir);
     }
@@ -30,5 +35,5 @@
     return randomElement(found);
   };
 
-  module.View = View;
-})(eLife);
+  return View;
+});

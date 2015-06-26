@@ -1,6 +1,8 @@
 //Animate world
 
-(function (module) {
+define([
+  'app/Universe/Plan',
+], function(world){
   'use strict';
 
   var active = null;
@@ -60,6 +62,5 @@
     new Animated(world);
   };
 
-  module.animateWorld = animateWorld;
-
-})(eLife);
+  return new animateWorld(world);
+});

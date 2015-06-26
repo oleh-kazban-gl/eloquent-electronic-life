@@ -1,19 +1,19 @@
 //Barrier
 
-(function (module) {
-  function Barrier() {
+define([
 
-  }
+], function () {
+  'use strict';
+
+  function Barrier() {}
 
 //Wall
-  function Wall() {
-
-  }
+  function Wall() {}
 
   //Wall.prototype = new Barrier();
 
-
-  module.Barrier = Barrier;
-
-  module.Barrier.Wall = Wall;
-})(eLife);
+  return {
+    barrier: Barrier,
+    wall: Wall
+  }
+});

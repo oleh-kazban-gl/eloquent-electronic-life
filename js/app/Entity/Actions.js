@@ -1,6 +1,9 @@
 //Action handler
 
-(function (module) {
+define([
+  'app/helperElements/elementFromChar'
+], function(elementFromChar){
+  'use strict';
 
   var actionTypes = Object.create(null);
 
@@ -46,5 +49,5 @@
     return true;
   };
 
-  module.Actions = actionTypes;
-})(eLife);
+  return actionTypes;
+});

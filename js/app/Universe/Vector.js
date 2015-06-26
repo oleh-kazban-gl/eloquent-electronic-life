@@ -1,6 +1,9 @@
 //Vector
 
-(function (module) {
+define([
+
+], function(){
+  'use strict';
 
   function Vector(x, y) {
     this.x = x;
@@ -11,5 +14,5 @@
     return new Vector(this.x + other.x, this.y + other.y);
   };
 
-  module.Vector = Vector;
-})(eLife);
+  return Vector;
+});

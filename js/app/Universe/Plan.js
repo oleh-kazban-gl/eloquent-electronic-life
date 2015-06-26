@@ -1,6 +1,13 @@
 //World plan
 
-(function (module) {
+define([
+  'app/Entity/Barrier',
+  'app/Entity/Critter',
+  'app/Entity/Plant',
+  'app/Universe/LifelikeWorld'
+], function(Barrier, Critter, Plant, LifelikeWorld){
+  'use strict';
+
   var map = [
     '########################################################################################################',
     '#                 ####         ****                          *  *  **                ***      o      ###',
@@ -23,13 +30,13 @@
   ];
 
   var description = {
-    '#': module.Barrier.Wall,
-    'o': module.Critter.SmartPlantEater,
-    '@': module.Critter.Tiger,
-    '*': module.Plant
+    '#': Barrier.wall,
+    'o': Critter.smartPlantEater,
+    '@': Critter.tiger,
+    //'*': Plant.grass
+    '*': Plant.plant
   };
 
-  var Plan = new module.LifelikeWorld(map, description);
-
-  module.Plan = Plan;
-})(eLife);
+  var valley = new LifelikeWorld(map, description);
+  return valley;
+});
