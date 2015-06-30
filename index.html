@@ -3,43 +3,50 @@
     <meta charset="UTF-8">
     <title>Electronic life</title>
     <style>
-        body, *{
+        body, * {
             font-family: monospace;
             font-size: 16px;
             margin-left: 15px;
         }
-        ul{
+
+        ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+        }
+        div {
+            margin: 5px;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
 
-<!--&lt;!&ndash;Main&ndash;&gt;-->
-<!--<script type="text/javascript" src="js/eLife.js"></script>-->
+<div class="info">
+    <h1>Electronic life</h1>
+</div>
 
-<!--&lt;!&ndash;Entities&ndash;&gt;-->
-<!--<script type="text/javascript" src="js/app/Entity/Plant.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Entity/Critter.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Entity/Barrier.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Entity/Actions.js"></script>-->
+    <pre>
+    	<div id="world"></div>
+    </pre>
 
-<!--&lt;!&ndash;Universe&ndash;&gt;-->
-<!--<script type="text/javascript" src="js/app/Universe/Elements.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Universe/World.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Universe/Vector.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Universe/Grid.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Universe/View.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Universe/Directions.js"></script>-->
-<!--<script type="text/javascript" src="js/app/Universe/Plan.js"></script>-->
+<div id="ticksCounter"></div>
 
-<!--<script type="text/javascript" src="js/app/Universe/animateWorld.js"></script>-->
-
-<!--<script>-->
-    <!--eLife.animateWorld(eLife.Plan);-->
-<!--</script>-->
+<fieldset>
+    <legend>Conventions</legend>
+    <ul>
+        <li># - Barrier (walls & rocks)</li>
+        <li>o - Plant eater (eat plants, reproduce when has enough energy or/and
+            other plant eater is near by)
+        </li>
+        <li>@ - Tiger (eat the plant-eaters, fight with other tigers, reproduce
+            when has enough energy or/and other tiger is near by)
+        </li>
+        <li>* - Plant (give energy to plant eaters, reproduce when has enough
+            energy)
+        </li>
+    </ul>
+</fieldset>
 
 <script data-main="js/main" src="js/lib/require.js"></script>
 

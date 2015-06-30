@@ -134,7 +134,7 @@ define([
 
 //Tiger
   function Tiger() {
-    this.energy = 40;
+    this.energy = 100;
     this.direction = 's';
     this.food = ['o', '@', '*'];
     this.totalFood = [];
@@ -146,7 +146,7 @@ define([
 
   Tiger.prototype.act = function (context) {
     var space = context.find(' ');
-    var entity = '@';
+    var entity = context.find('@');
 
     this.information = {
       entity: this.entity,
@@ -182,12 +182,17 @@ define([
       this.direction = space || 's';
     }
 
-    if (entity) {
-      if (this.energy > 60 && space) {
+    if (entity && space) {
+      if (this.energy > 200) {
         this.information.action = 'reproduce';
         console.log(this.information);
 
         return {type: 'reproduce', direction: space}
+      }else if (this.energy < 50){
+        this.information.action = 'run out from other tiger';
+        console.log(this.information);
+
+        return {type: 'move', direction: space}
       } else {
         this.information.action = 'fight';
         this.energy -= 5;

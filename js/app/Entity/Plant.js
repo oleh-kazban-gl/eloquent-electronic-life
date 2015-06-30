@@ -53,7 +53,7 @@ define([
       var space = context.find(' ');
       if (space) {
         this.information.action = 'reproduce';
-        console.log(this.information);
+        //console.log(this.information);
 
         return {type: 'reproduce', direction: space};
       }
@@ -61,7 +61,7 @@ define([
 
     if (this.energy < 20) {
       this.information.action = 'grow';
-      console.log(this.information);
+      //console.log(this.information);
 
       return {type: 'grow'};
     }

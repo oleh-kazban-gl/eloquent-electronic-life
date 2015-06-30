@@ -14,6 +14,7 @@ define([
     var grid = new Grid(map[0].length, map.length);
     this.grid = grid;
     this.legend = legend;
+    this.tickCounter = 0;
 
     map.forEach(function (line, y) {
       for (var x = 0; x < line.length; x++) {
@@ -42,6 +43,9 @@ define([
         this.letAct(critter, vector);
       }
     }, this);
+    this.tickCounter++;
+
+    document.getElementById('ticksCounter').innerHTML = 'World ticks since creation: ' + this.tickCounter;
   };
 
   World.prototype.letAct = function (critter, vector) {
