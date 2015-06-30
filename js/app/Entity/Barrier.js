@@ -1,19 +1,12 @@
 //Barrier
 
-define([
-
-], function () {
-  'use strict';
-
-  function Barrier() {}
+function Barrier() {}
 
 //Wall
-  function Wall() {}
+function Wall() {}
 
-  //Wall.prototype = new Barrier();
-
-  return {
-    barrier: Barrier,
-    wall: Wall
-  }
-});
+//Wall.prototype = new Barrier();
+ module.exports = {
+   barrier: Barrier,
+   wall: Wall
+ };
