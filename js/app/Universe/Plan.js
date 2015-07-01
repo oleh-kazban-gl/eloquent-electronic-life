@@ -43,5 +43,6 @@ define(function(require){
   };
 
   var valley = new LifelikeWorld(map, description);
+
   return valley;
 });

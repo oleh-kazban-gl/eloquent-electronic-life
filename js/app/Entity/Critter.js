@@ -209,7 +209,6 @@ define(function (require) {
   };
 
   return {
-    critter: Critter,
     smartPlantEater: SmartPlantEater,
     tiger: Tiger
   }
