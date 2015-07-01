@@ -623,9 +623,9 @@ function refreshMap() {
     world.turn();
     document.getElementById('world').innerHTML = world.toString();
     document.getElementById('ticksCounter').innerHTML = 'World ticks since creation: ' + world.tickCounter;
-    document.getElementById('worldObjects').innerHTML = 'Entities: ' + '\n' +
-      'Plants: ' + calcEntities().plants + '\n' +
-      'PlantEaters: ' + calcEntities().plantEaters + '\n' +
+    document.getElementById('worldObjects').innerHTML = '<h3>Entities:</h3>' +
+      'Plants: ' + calcEntities().plants + '<br>' +
+      'PlantEaters: ' + calcEntities().plantEaters + '<br>' +
       'Tigers: ' + calcEntities().tigers;
   }, 333);
 }
