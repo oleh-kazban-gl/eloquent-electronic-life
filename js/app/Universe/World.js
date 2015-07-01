@@ -1,4 +1,10 @@
-//World
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * World: world mechanics
+ */
 
 var Grid = require('./Grid');
 var Vector = require('./Vector');
@@ -41,8 +47,6 @@ World.prototype.turn = function () {
     }
   }, this);
   this.tickCounter++;
-
-  //document.getElementById('ticksCounter').innerHTML = 'World ticks since creation: ' + this.tickCounter;
 };
 
 World.prototype.letAct = function (critter, vector) {

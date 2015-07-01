@@ -1,4 +1,10 @@
-//Plant
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * Plant: plant definition
+ */
 
 var Plant = function () {
   this.energy = 3 + Math.random() * 4;
@@ -35,8 +41,6 @@ var Grass = function () {
   this.information = {};
 };
 
-//Grass.prototype = new Plant();
-
 Grass.prototype.act = function (context) {
 
   this.information = {
@@ -62,7 +66,4 @@ Grass.prototype.act = function (context) {
   }
 };
 
-module.exports = {
-  plant: Plant,
-  grass: Grass
-};
+module.exports = Plant;
