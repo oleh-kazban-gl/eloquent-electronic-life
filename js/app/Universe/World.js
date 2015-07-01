@@ -1,14 +1,20 @@
-//World
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * World: world mechanics
+ */
 
-define([
-  'app/Universe/Grid',
-  'app/Universe/Vector',
-  'app/helperElements/charFromElement',
-  'app/helperElements/elementFromChar',
-  'app/Universe/View',
-  'app/Universe/directions'
-], function (Grid, Vector, charFromElement, elementFromChar, View, directions) {
+define(function (require) {
   'use strict';
+
+  var Grid = require('app/Universe/Grid');
+  var Vector = require('app/Universe/Vector');
+  var charFromElement = require('app/helperElements/charFromElement');
+  var elementFromChar = require('app/helperElements/elementFromChar');
+  var View = require('app/Universe/View');
+  var directions = require('app/Universe/directions');
 
   function World(map, legend) {
     var grid = new Grid(map[0].length, map.length);
@@ -44,8 +50,6 @@ define([
       }
     }, this);
     this.tickCounter++;
-
-    document.getElementById('ticksCounter').innerHTML = 'World ticks since creation: ' + this.tickCounter;
   };
 
   World.prototype.letAct = function (critter, vector) {

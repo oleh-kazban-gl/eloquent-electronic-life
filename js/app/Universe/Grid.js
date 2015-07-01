@@ -1,9 +1,15 @@
-//Grid
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * Grid: world's grid
+ */
 
-define([
-  'app/Universe/Vector'
-], function(Vector){
+define(function(require){
   'use strict';
+
+  var Vector = require('app/Universe/Vector');
 
   function Grid(width, height) {
     this.space = new Array(width * height);

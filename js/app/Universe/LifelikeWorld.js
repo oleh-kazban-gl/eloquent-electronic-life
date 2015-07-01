@@ -1,11 +1,17 @@
-//Lifelike World
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * LifelikeWorld: is used for bringing life to objects
+ */
 
-define([
-  'app/Universe/World',
-  'app/Universe/View',
-  'app/Entity/Actions'
-], function(World, View, Actions){
+define(function(require){
   'use strict';
+
+  var World = require('app/Universe/World');
+  var View = require('app/Universe/View');
+  var Actions = require('app/Entity/Actions');
 
   function LifelikeWorld(map, legend) {
     World.call(this, map, legend);

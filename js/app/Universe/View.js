@@ -1,11 +1,17 @@
-//View
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * View: what entity see right in front
+ */
 
-define([
-  'app/Universe/directions',
-  'app/helperElements/charFromElement',
-  'app/helperElements/randomElement'
-], function(directions, charFromElement, randomElement){
+define(function(require){
   'use strict';
+
+  var directions = require('app/Universe/directions');
+  var charFromElement = require('app/helperElements/charFromElement');
+  var randomElement = require('app/helperElements/randomElement');
 
   function View(World, Vector) {
     this.world = World;

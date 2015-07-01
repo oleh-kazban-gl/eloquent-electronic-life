@@ -1,9 +1,15 @@
-//Critter
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * Critter: critter definition
+ */
 
-define([
-  '../helperElements/randomElement'
-], function (randomElement) {
+define(function (require) {
   'use strict';
+
+  var randomElement = require('../helperElements/randomElement');
 
   function Critter() {
     this.energy = 10;
@@ -13,7 +19,6 @@ define([
     this.information = {};
   }
 
-//SmartPlantEater
   function SmartPlantEater() {
     this.energy = 30;
     this.hungry;
@@ -22,9 +27,6 @@ define([
     this.entity = 'o';
     this.information = {};
   }
-
-//SmartPlantEater.prototype = new Critter();
-//SmartPlantEater.__proto__ = Critter;
 
   SmartPlantEater.prototype.act = function (context) {
     var space = context.find(' ');
@@ -132,7 +134,6 @@ define([
     }
   };
 
-//Tiger
   function Tiger() {
     this.energy = 100;
     this.direction = 's';
@@ -141,8 +142,6 @@ define([
     this.entity = '@';
     this.information = {};
   }
-
-//Tiger.__proto__ = Critter;
 
   Tiger.prototype.act = function (context) {
     var space = context.find(' ');

@@ -1,8 +1,12 @@
-//Plant
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * Plant: plant definition
+ */
 
-define([
-
-], function () {
+define(function () {
   'use strict';
 
   var Plant = function () {
@@ -40,8 +44,6 @@ define([
     this.information = {};
   };
 
-//Grass.prototype = new Plant();
-
   Grass.prototype.act = function (context) {
 
     this.information = {
@@ -53,7 +55,7 @@ define([
       var space = context.find(' ');
       if (space) {
         this.information.action = 'reproduce';
-        //console.log(this.information);
+        console.log(this.information);
 
         return {type: 'reproduce', direction: space};
       }
@@ -61,14 +63,11 @@ define([
 
     if (this.energy < 20) {
       this.information.action = 'grow';
-      //console.log(this.information);
+      console.log(this.information);
 
       return {type: 'grow'};
     }
   };
 
-  return {
-    plant: Plant,
-    grass: Grass
-  }
+  return Plant
 });

@@ -1,9 +1,15 @@
-//Action handler
+/**
+ * @license eLife 1.0 Copyright (c) 2015, Oleh Kazban All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: https://github.com/olehkazban/eloquent-electronic-life for details
+ *
+ * Actions: here defined all possible actions for entity
+ */
 
-define([
-  'app/helperElements/elementFromChar'
-], function(elementFromChar){
+define(function(require){
   'use strict';
+
+  var elementFromChar = require('app/helperElements/elementFromChar');
 
   var actionTypes = Object.create(null);
 
