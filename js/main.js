@@ -1,10 +1,4 @@
-requirejs.config({
-  baseUrl: 'js',
-  paths: {
-    app: 'app/'
-  }
-});
+var map = require('./app/Universe/Plan');
+var start = require('./app/Universe/animateWorld');
 
-require([
-  'app/Universe/animateWorld'
-],function (Animateworld) {});
+start(map);
